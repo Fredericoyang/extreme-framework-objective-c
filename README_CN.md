@@ -1,38 +1,50 @@
 [English](README_EN.md)
-#把极致带到开发中去
+# 把极致带到开发中去
 
-极致框架是一整套力求快速构建iOS项目基本框架的完整解决方案，由iOS项目基本框架、核心框架与核心UI组成一个整体。统一的宏与配置项，一处修改，全局生效，高效的工具方法类快捷解决基础问题，基于Storyboard的高度封装，自动布局加持，摆脱代码定制烦恼，高度封装的HTTPTool与高度集成于基类的方法满足常见需求速成方案的需要，集成式的工具箱囊括集成式支付、指纹验证、照片上传等常用集成功能模块。
+极致框架是一整套力求快速构建 iOS项目基本框架的完整解决方案，由核心框架、项目基本框架、核心UI以及核心工具集组成一个整体。项目基本框架基于核心框架封装快速解决基础问题，核心UI基于 Storyboard的封装，自动布局加持，摆脱代码定制烦恼，不断壮大的核心工具集满足常见功能速成方案的需要。
 
 Hello world! 极致框架！
 
-![平台截图](http://www.xfmwk.com/images/folders_extreme_framework@2x.png)
-
-
-
 ## 接入指南
 
-1. 从官方git地址Clone
-1. 修改为自己的项目
-1. 添加自己的项目文件，继续开发
+1. Clone iOS项目基本文件到本地
+2. 修改为自己的项目
+3. 添加自己的项目文件，继续开发
 
+> * [极致框架是什么](http://www.xfmwk.com/tags/极致框架/)
 > * [快速上手](http://www.xfmwk.com/2019/05/22/快速上手目录/)
-> * [开发指南](http://www.xfmwk.com/categories/开发指南/)
-> * [开发文档](http://www.xfmwk.com/categories/开发文档/)
-> * [常见问题](http://www.xfmwk.com/categories/常见问题/)
-
-
+> * [开发文档](http://www.xfmwk.com/2019/05/22/开发文档目录/)
+> * [常见问题](http://www.xfmwk.com/2019/05/22/常见问题/)
 
 ## 官网
 
 打开 [官网](http://www.xfmwk.com/)
 
-
-
 ## 发布历史
 
 ### 正式版
+#### 2.0(最终版) 2021-7-5
+1       EFUtils: 转换工具添加了新的方法，添加了编码为 base64字符串和解码为 NSData的方法，UI工具添加了新的方法，取消了 DES加解密方法。
+2       EFBase:
+2.1     EFBaseViewController: 自定义返回与自定义取消方案改进，获取位置添加了新的方法，获取照片添加了新的方法，添加了获取录音权限的方法，添加了嵌入式 tableView的支持，可以像 EFBaseTableViewController中自带的 tableView一样使用，添加了数据刷新与分页和无数据显示的联动显示效果，输入聚焦方案改进。
+2.2     EFBaseTableViewController: 自定义返回与自定义取消方案改进，获取位置添加了新的方法，获取照片添加了新的方法，添加了获取录音权限的方法，添加了数据刷新与分页和无数据显示的联动显示效果，输入聚焦方案改进。
+2.3     EFBaseModalDialogViewController: 弹出式对话框基类，目前提供了最常用的三种弹出式对话框。
+2.4     EFBaseWebViewController: UIWebView替换为 WKWebView。
+2.5     BaseDataModel: 添加了自动归解档的支持。
+3       EFUIKit:
+3.1     EFNavigationBar: 取消了渐变色背景，深浅模式现在对应主题色，除了按钮、标题颜色，现在也作用于背景色。
+3.2     EFModalDialog: 提供了最常用的三种弹出式对话框：列表单选或者多选、日期(时间可选)选择、最多两级的级联选项。
+3.3     EFButton: 提供了边框、圆角、渐变背景自定义，内容水平居中、图标居左、图标居上多种显示风格。
+3.4     EFView: 提供了边框、圆角、阴影效果自定义。
+3.5     EFImageView: 提供了边框、圆角、阴影效果、图像填充方式自定义。
+3.6     EFLabel: 提供了边框、圆角自定义，添加了通过 NSString实例化的方法，添加了文字显示不全时，点击以浮动提示方式显示全部文字的效果，默认不启用。
+3.7     EFTextField: 提供了边框、圆角、占位文字颜色、文字显示位置偏移量自定义。
+4       AFHTTPTool: AFHTTPConfig 错误码升级为状态码，获取 AFHTTPSessionManager时不再要求提供授权，改由各请求处理。
+5       EFFMDBTool: 基于 BaseDataModel的模型sqlite自动存取。
+6       演示 App同步更新，通过导航的深浅风格改变主题色。
+7       适配了 iOS14系统，项目通过 Xcode12成功编译。
 
-#### 1.5 2019-9-9
+1.5(最终版) 2019-9-30
 1	EFMacros: ROOT_VC调整，适用范围更广。
 2	EFUtils:
 2.1	新增了 boolValueFromNumber:，可快速从 NSNumber获取 boolValue。
@@ -49,7 +61,7 @@ Hello world! 极致框架！
 4	ImageUploadTool: 支持自定义图片上传接口路径和用于自定义图片上传接口的 image Key，并可自定义上传时的提示信息。
 5	AppConfig: 归类并增加说明，更有条理。
 6	AppMacros: Theme Colors配置项移至 AppConfig。
-7	AppDelegate: 新增App首次运行的 NSUserDefaults的配置项: init once。
+7	AppDelegate: 新增 App首次运行的 NSUserDefaults的配置项: init once。
 8	请求位置信息另外添加了总是使用位置的隐私权限描述。
 9	同步改进的演示App，集成 AFHTTPTool的演示。
 10	彩蛋：登录界面图标连续点击切换服务器环境，仅开发测试有效。
@@ -70,7 +82,7 @@ AFHTTPTool：直接通过 AFHTTPConfig配置自定义项，优化的错误分级
 修复了基于表格控制器基类中封装的 MJRefresh启用之后再自定义 refreshHeader和 refreshFooter无效的问题。
 
 1.1.1 2018-9-20
-优化了演示应用。兼容 Xcode10，基于最新SDK编译。
+优化了演示应用。兼容 Xcode10，基于最新 SDK编译。
 新增：
 1、EFUtils: DES加解密的相关方法，适用于常规加解密。
 2、LABiometryTool: iPhone X面容验证。

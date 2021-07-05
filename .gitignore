@@ -1,4 +1,7 @@
 ExtremeFramework.xcworkspace/xcuserdata/
 ExtremeFramework.xcodeproj/xcuserdata/
+DerivedData/
+build/
 Pods/
 Podfile.lock
+

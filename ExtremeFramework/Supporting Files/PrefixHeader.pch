@@ -3,7 +3,7 @@
 //  ExtremeFramework
 //
 //  Created by Fredericoyang on 2017/8/1.
-//  Copyright © 2017-2019 www.xfmwk.com. All rights reserved.
+//  Copyright © 2017-2021 www.xfmwk.com. All rights reserved.
 //
 
 #ifndef PrefixHeader_pch
@@ -16,22 +16,36 @@
 #import <extreme/extreme.h>
 
 
-//MARK: - App Tools
-#import "AppConfig.h"
-#import "AppMacros.h"
+//MARK: - App utils
 #import "AppUtils.h"
 
-//MARK: Tools
+
+//MARK: - Tools
 #import "AppRequestURLs.h"
 #import "AFHTTPTool/AppHTTPTool.h"
 #import "ImageUploadTool/ImageUploadTool.h"
 #import "LABiometryTool/LABiometryTool.h"
+#import "CodeScanerTool/CodeScanerTool.h"
+#import "EFFMDBTool/EFFMDBTool.h"
 
-//MARK: Web view tool
+//MARK: Web tool
 #import "WebTool/NormalBaseWebViewController.h"
 #import "WebTool/ActivityBaseWebViewController.h"
 
-//MARK: UIKit
+
+//MARK: - UIKit
+//MARK: Modal dialog
+#import "EFUIKit/EFModalDialog/ListSelector_VC.h"
+#import "EFUIKit/EFModalDialog/ListSelector_TVCell.h"
+#import "EFUIKit/EFModalDialog/DaySelector_VC.h"
+#import "EFUIKit/EFModalDialog/LevelSelector_VC.h"
+#import "EFUIKit/EFModalDialog/LevelModel.h"
+
 #import "EFUIKit/EFNavigationBar/EFNavigationBar.h"
+#import "EFUIKit/EFButton/EFButton.h"
+#import "EFUIKit/EFView/EFView.h"
+#import "EFUIKit/EFImageView/EFImageView.h"
+#import "EFUIKit/EFLabel/EFLabel.h"
+#import "EFUIKit/EFTextField/EFTextField.h"
 
 #endif /* PrefixHeader_pch */
